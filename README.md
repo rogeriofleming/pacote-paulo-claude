@@ -1,6 +1,6 @@
 # Pacote pro Paulo — organização do Claude Code + Fable Mode + DaVinci MCP
 
-Este repositório reúne três coisas, cada uma numa pasta:
+Este repositório reúne quatro coisas, cada uma numa pasta:
 
 ## 1. `ecossistema-claude/`
 
@@ -23,7 +23,17 @@ checar ou entregar o primeiro rascunho sem se questionar. Vem em duas formas
 
 - [`COMO_USAR.md`](skill-fable-mode/COMO_USAR.md) — leia primeiro, tem o passo a passo de instalação.
 
-## 3. `davinci-resolve-mcp/`
+## 3. `skill-pesquisa-profunda/`
+
+Um harness de pesquisa multi-fonte com verificação — substitui a skill
+`deep-research` oficial do Claude Code, que dispara ~100 subagentes, queima
+milhões de tokens e não salva nada em disco (se a sessão morre, perde tudo).
+Esta versão tem teto de ~24 agentes, salva cada resultado em disco na hora,
+usa um verificador cético por claim e permite retomar de onde parou.
+
+- [`COMO_USAR.md`](skill-pesquisa-profunda/COMO_USAR.md) — leia primeiro, tem instalação e uso.
+
+## 4. `davinci-resolve-mcp/`
 
 MCP que conecta o Claude ao DaVinci Resolve, adaptado pra Windows + Resolve
 **free** (não exige o Studio pra transcrição local e pros dois scripts de
