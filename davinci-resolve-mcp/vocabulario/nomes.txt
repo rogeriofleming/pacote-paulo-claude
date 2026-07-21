@@ -1,0 +1,25 @@
+# Glossário de nomes próprios — vira o `initial_prompt` do Whisper.
+#
+# COMO FUNCIONA: estas linhas são juntadas numa frase e entregues ao Whisper
+# ANTES da transcrição. Isso enviesa o modelo a esperar esse vocabulário, o que
+# corrige a maior parte dos erros de nome próprio na origem.
+#
+# LIMITE IMPORTANTE: o Whisper só lê ~224 tokens de prompt e, se passar, ele
+# corta o COMEÇO e mantém o FIM. Então: mantenha a lista curta e ponha o que
+# mais importa no fim. Não vire uma enciclopédia — só o que realmente é falado.
+#
+# Linhas com # e linhas vazias são ignoradas. Uma entrada por linha.
+# O que escapar daqui, conserte em correcoes.txt.
+#
+# EXEMPLO — troque pelos nomes/marcas/jargão do SEU conteúdo:
+
+# Pessoas
+Fulano de Tal
+Sicrana da Silva
+
+# Marcas e projetos
+Nome do Canal ou Produto
+
+# Termos técnicos / jargão recorrente
+termo específico do seu nicho
+outro termo específico

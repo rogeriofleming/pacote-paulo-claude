@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "resolve": {
+      "command": "C:\\Users\\SEU_USUARIO\\.local\\bin\\uv.exe",
+      "args": [
+        "--directory",
+        "C:\\CAMINHO\\PARA\\davinci-resolve-mcp",
+        "run",
+        "resolve-claude-mcp"
+      ],
+      "env": {
+        "RESOLVE_SCRIPT_LIB": "C:\\Program Files\\Blackmagic Design\\DaVinci Resolve\\fusionscript.dll",
+        "RESOLVE_SCRIPT_API": "C:\\ProgramData\\Blackmagic Design\\DaVinci Resolve\\Support\\Developer\\Scripting",
+        "PYTHONPATH": "C:\\ProgramData\\Blackmagic Design\\DaVinci Resolve\\Support\\Developer\\Scripting\\Modules",
+        "WHISPER_MODEL": "medium",
+        "WHISPER_DEVICE": "cpu",
+        "WHISPER_COMPUTE_TYPE": "int8"
+      }
+    }
+  }
+}

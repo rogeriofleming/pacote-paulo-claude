@@ -1,0 +1,70 @@
+# Mapa de correções — aplicado DEPOIS da transcrição, direto no texto e no SRT.
+#
+# POR QUE EXISTE: o `initial_prompt` (nomes.txt) enviesa o modelo, mas não
+# garante. Isto aqui garante — é busca e substituição determinística.
+#
+# FORMATO:  errado => certo
+#   - Uma regra por linha. Linhas com # e vazias são ignoradas.
+#   - A busca IGNORA maiúsculas/minúsculas e acentos NÃO são normalizados
+#     (escreva o errado como o Whisper realmente escreveu).
+#   - Respeita fronteira de palavra: "ana" não vira parte de "banana".
+#
+# COMO ALIMENTAR: toda vez que aparecer um erro recorrente de nome, some uma
+# linha aqui. É o lugar onde o conserto fica permanente.
+
+# ⚠️ REGRA DE OURO: legenda diz o que foi FALADO. Só corrija grafia/reconhecimento
+# errado — nunca insira palavra que ninguém disse (ex.: NÃO transformar
+# "João Silva" em "Doutor João Silva" só porque é assim que você o chama em
+# outro contexto; título/tratamento é regra de copy, não de legenda, e
+# inserir isso falsifica o que a pessoa falou).
+#
+# ⚠️ As regras são aplicadas em ORDEM, uma passada cada. Cuidado com regra cujo
+# resultado casa com outra regra abaixo (efeito cascata).
+
+# ═══════════════════════════════════════════════════════════════════
+# CLASSE A — NOMES PRÓPRIOS  (seguro: sempre corrigir aqui)
+# ═══════════════════════════════════════════════════════════════════
+# Substituição cega funciona porque a palavra errada NUNCA é intencional
+# no SEU conteúdo: ninguém quer dizer a forma errada de propósito.
+#
+# EXEMPLO de técnica — corrija por COMPONENTE, não por combinação: se um nome
+# composto ("Fulano da Silva") sai errado de jeitos diferentes por modelo
+# (ex.: base="Fulano da Silvia", small="Filano da Silva"), separe as regras por
+# pedaço do nome em vez de tentar cobrir cada combinação:
+# Filano => Fulano
+# Silvia => Silva
+#
+# Regra prática: se uma grafia específica é SEMPRE a pretendida no seu
+# conteúdo (ex.: um nome com grafia incomum que o Whisper sempre erra pra
+# grafia comum), vale uma regra fixa:
+# GrafiaComum => SuaGrafiaCorreta
+
+# EXEMPLO — palavra que o modelo `base` costuma quebrar em duas:
+# a-palavra-composta => PalavraComposta
+
+
+# ═══════════════════════════════════════════════════════════════════
+# CLASSE B — COLISÕES FONÉTICAS  (⚠️ risco: preferir modelo maior)
+# ═══════════════════════════════════════════════════════════════════
+# AQUI O MODELO NÃO ERROU DE OUVIDO — ele acertou o som e errou onde cortar
+# a palavra. Fonética do PB, em "desacelerar":
+#   1. alçamento vocálico: o "e" átono de "des-" sobe para [i]  -> [dʒis]
+#   2. sonorização do "s" entre vogais: "des"+"a" -> [za]
+#   => "desacelerar" sai da boca como [dʒi.za.se.le.ˈɾaɾ], acusticamente
+#      IDÊNTICO a "diz acelerar". Língua falada != língua escrita.
+#
+# ⚠️ POR QUE ISTO É PERIGOSO: diferente de nome próprio, estas formas PODEM ser
+# fala legítima. "ele diz acelerar mais" é frase válida — e a regra abaixo a
+# corromperia em "ele desacelerar mais". Busca/substituição é cega a contexto;
+# este tipo de erro DEPENDE de contexto.
+#
+# ✅ O CONSERTO CERTO É O MODELO: o `medium` acerta "desacelerar" sozinho, não
+# por ouvir melhor, mas porque o modelo de linguagem dele sabe que
+# "permita-se desacelerar" é mais provável que "permita-se diz acelerar".
+# Como `medium` é o padrão (.mcp.json), as regras abaixo são só rede de
+# segurança pra quando alguém usar `base`/`small` num rascunho.
+#
+# Antes de somar regra nesta classe: pergunte se a forma "errada" pode ser fala
+# legítima. Se puder, NÃO some — troque o modelo.
+de exacelerar => desacelerar
+diz acelerar => desacelerar

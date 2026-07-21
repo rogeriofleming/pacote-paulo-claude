@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+davinci-resolve-mcp/.mcp.json
+davinci-resolve-mcp/tmp/
+davinci-resolve-mcp/_corte_ne_log.txt
+davinci-resolve-mcp/_corte_silencio_log.txt
+davinci-resolve-mcp/_diagnostico_resolve.txt
+davinci-resolve-mcp/src/resolve_claude_mcp.egg-info/
