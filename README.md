@@ -1,6 +1,6 @@
-# Pacote pro Paulo — organização do Claude Code + Fable Mode + DaVinci MCP
+# Pacote pro Paulo — organização do Claude Code, skills e DaVinci MCP
 
-Este repositório reúne seis coisas, cada uma numa pasta:
+Este repositório reúne onze coisas, cada uma numa pasta:
 
 ## 1. `ecossistema-claude/`
 
@@ -52,7 +52,52 @@ cara de robô.
 
 - [`COMO_USAR.md`](skill-brevidade-inteligente/COMO_USAR.md) — leia primeiro, tem instalação e uso.
 
-## 6. `davinci-resolve-mcp/`
+## 6. `skill-find-skills/`
+
+Ajuda a **descobrir e instalar skills** do ecossistema aberto (o "app store" de skills
+via `npx skills` / skills.sh) — busca por assunto, filtra por qualidade e mostra o
+comando de instalar. Quase toda genérica (é da Anthropic); com uma nota de segurança
+antes de instalar coisa de terceiro.
+
+- [`COMO_USAR.md`](skill-find-skills/COMO_USAR.md) — leia primeiro.
+
+## 7. `skill-criar-skill/`
+
+Cópia editável da **skill-creator** da Anthropic — a skill que **cria, refaz e melhora
+outras skills**. Método rigoroso completo (rascunho → testes → avaliar → reescrever) +
+um Passo 0 de triagem que adapta o nível de rigor ao tipo de skill. Vem com toda a
+maquinaria (scripts Python, agentes, eval-viewer).
+
+- [`COMO_USAR.md`](skill-criar-skill/COMO_USAR.md) — leia primeiro.
+
+## 8. `skill-iniciar-sessao/`
+
+Protocolo de **abertura de sessão**: descobre data/hora, sincroniza o git (e integra
+branches de sessão do celular), lê os docs de estado do projeto e reporta o estado +
+próxima ação. Par do encerrar-sessao.
+
+- [`COMO_USAR.md`](skill-iniciar-sessao/COMO_USAR.md) — leia primeiro.
+
+## 9. `skill-encerrar-sessao/`
+
+Protocolo de **fechamento de sessão** — encerrar não é faxina, é **colheita**: relê a
+conversa e roteia cada aprendizado pro lugar único e certo (feedback→memória,
+conhecimento→doc, método novo→skill), mantém fonte única, atualiza os docs de estado e
+sincroniza. Par do iniciar-sessao.
+
+- [`COMO_USAR.md`](skill-encerrar-sessao/COMO_USAR.md) — leia primeiro.
+
+## 10. `Apometria/`
+
+Base de conhecimento **geral e público** sobre Apometria, montada no modelo de estudos
+do Obsidian (uma pasta-assunto com notas atômicas conectadas por `[[links]]`). Pra
+estudar e pra treinar o Claude no assunto. Só conhecimento geral — sem material
+proprietário de nenhum terapeuta.
+
+- [`Apometria.md`](Apometria/Apometria.md) — nota-índice, comece por ela.
+- [`README.md`](Apometria/README.md) — como a pasta foi montada.
+
+## 11. `davinci-resolve-mcp/`
 
 MCP que conecta o Claude ao DaVinci Resolve, adaptado pra Windows + Resolve
 **free** (não exige o Studio pra transcrição local e pros dois scripts de
