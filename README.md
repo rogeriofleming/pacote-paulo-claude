@@ -1,6 +1,6 @@
 # Pacote pro Paulo — organização do Claude Code + Fable Mode + DaVinci MCP
 
-Este repositório reúne quatro coisas, cada uma numa pasta:
+Este repositório reúne seis coisas, cada uma numa pasta:
 
 ## 1. `ecossistema-claude/`
 
@@ -33,7 +33,26 @@ usa um verificador cético por claim e permite retomar de onde parou.
 
 - [`COMO_USAR.md`](skill-pesquisa-profunda/COMO_USAR.md) — leia primeiro, tem instalação e uso.
 
-## 4. `davinci-resolve-mcp/`
+## 4. `skill-humanizer/`
+
+Tira a "cara de IA" de um texto — deixa a escrita soar natural e humana. Detecta
+e conserta 33 padrões típicos de LLM (símbolos inflados, linguagem promocional,
+regra de três, excesso de travessão, voz passiva, frases de preenchimento, tom
+bajulador). Skill de terceiro (MIT, baseada no guia "Signs of AI writing" da
+Wikipedia).
+
+- [`COMO_USAR.md`](skill-humanizer/COMO_USAR.md) — leia primeiro, tem instalação e uso.
+
+## 5. `skill-brevidade-inteligente/`
+
+Reescreve/revisa textos de trabalho (email, mensagem, newsletter, slide, aviso de
+equipe) pelo método Brevidade Inteligente da Axios — 1 pessoa, 1 ideia, na frente,
+sem enrolação. Combina com o Humanizer: brevidade corta o excesso, humanizer tira a
+cara de robô.
+
+- [`COMO_USAR.md`](skill-brevidade-inteligente/COMO_USAR.md) — leia primeiro, tem instalação e uso.
+
+## 6. `davinci-resolve-mcp/`
 
 MCP que conecta o Claude ao DaVinci Resolve, adaptado pra Windows + Resolve
 **free** (não exige o Studio pra transcrição local e pros dois scripts de
