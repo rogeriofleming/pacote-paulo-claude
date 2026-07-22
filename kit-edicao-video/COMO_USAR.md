@@ -77,6 +77,11 @@ Nesta pasta tem, no formato do Claude Code:
 - `referencias/GUIA_RETENCAO.md` — os **princípios de retenção** (hook, variação,
   ritmo, cortes) com o peso de evidência de cada um (ciência dura × prática de
   mercado × ofício de editor). É o que o estrategista consulta pra decidir.
+- `conhecimento-edicao/` — o **corpo de conhecimento** por trás do kit (pesquisa com
+  fontes): `automacao-davinci-python.md` (o que dá pra automatizar no Resolve free ×
+  Studio, via Python), `boas-praticas-e-recursos-gratis.md` (o que faz um vídeo
+  prender + bancos de música/b-roll/fontes/templates 100% grátis, licença conferida) e
+  `o-que-editores-reais-dizem.md` (editores profissionais nomeados sobre o ofício).
 - `agente/editor-video.md` — um **agente** que edita um vídeo de ponta a ponta,
   orquestrando as ferramentas na ordem certa. Aciona com "edita esse vídeo".
 

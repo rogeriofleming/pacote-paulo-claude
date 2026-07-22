@@ -132,4 +132,5 @@ ponta a ponta na ordem certa. Roda junto do `davinci-resolve-mcp` (mesmo venv e 
 
 - [`COMO_USAR.md`](kit-edicao-video/COMO_USAR.md) — leia primeiro.
 - [`referencias/GUIA_RETENCAO.md`](kit-edicao-video/referencias/GUIA_RETENCAO.md) — os princípios de retenção (ciência × prática × ofício) que o estrategista usa pra decidir.
+- [`conhecimento-edicao/`](kit-edicao-video/conhecimento-edicao/) — o corpo de conhecimento de pesquisa por trás do kit: automação do DaVinci por Python (free × Studio), boas práticas de edição + bancos de recursos 100% grátis (licença conferida), e o que editores profissionais reais dizem sobre o ofício.
 - Scripts em [`davinci-resolve-mcp/scripts_resolve/`](davinci-resolve-mcp/scripts_resolve/) (`30`–`70`).
