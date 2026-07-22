@@ -18,6 +18,23 @@ Ou seja: mesmo sem comprar o Studio, você já ganha transcrição/legenda autom
 e os dois cortes automáticos — que costumam ser a parte mais chata e demorada
 de editar.
 
+## Jeito FÁCIL: um clique instala tudo (Windows)
+
+Depois de clonar o repositório, entre na pasta `davinci-resolve-mcp` e **dê duplo
+clique em `INSTALAR.bat`**. Ele faz sozinho: confere o Python, instala o `uv` e o
+`ffmpeg` (build certo do gyan.dev) se faltarem, instala as dependências
+(`faster-whisper` etc.), **baixa o modelo Whisper** e roda um autoteste pra provar
+que a transcrição e o pipeline de vídeo funcionam. Se ele instalar o `uv`/`ffmpeg`,
+peça pra você fechar e rodar o `INSTALAR.bat` **uma segunda vez** (o Windows só
+enxerga programa novo num terminal novo) — a 2ª rodada termina tudo.
+
+> macOS/Linux: rode `./instalar.sh` na mesma pasta (instala o `ffmpeg` você mesmo
+> pelo `brew`/`apt` — o script avisa).
+
+O que o instalador NÃO faz: registrar o MCP no seu Claude (isso é o `.mcp.json`,
+passo 3 abaixo) e configurar o Resolve Studio (passo 5). O passo a passo manual
+abaixo continua valendo se você preferir fazer à mão ou se algo falhar.
+
 ## Passo a passo de instalação
 
 ### 1. Pré-requisitos

@@ -9,6 +9,13 @@ Feito pra rodar junto do `davinci-resolve-mcp` deste mesmo repositório: os scri
 ficam em **`davinci-resolve-mcp/scripts_resolve/`** e usam o mesmo `.venv` e o mesmo
 motor de transcrição (faster-whisper) que já vêm configurados lá.
 
+## Instalar (jeito fácil)
+
+Na pasta `davinci-resolve-mcp`, dê duplo clique em **`INSTALAR.bat`** (Windows) ou
+rode **`./instalar.sh`** (macOS/Linux): ele instala tudo (uv, ffmpeg, faster-whisper),
+baixa o modelo Whisper e testa. Detalhe em `davinci-resolve-mcp/INSTRUCOES_PAULO.md`.
+Os pré-requisitos abaixo são o que o instalador cuida por você.
+
 ## Pré-requisitos
 
 1. Ter o `davinci-resolve-mcp` instalado (ver `davinci-resolve-mcp/INSTRUCOES_PAULO.md`)
