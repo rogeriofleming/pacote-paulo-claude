@@ -117,3 +117,16 @@ que mede o overflow horizontal em 5 larguras e **aponta o elemento que está vaz
 tela**, até fechar em zero. Inclui o motor de medição e um exemplo quebrado pra testar.
 
 - [`COMO_USAR.md`](skill-responsivar-mobile/COMO_USAR.md) — leia primeiro, tem instalação e uso.
+
+## 13. `kit-edicao-video/`
+
+Kit pra **editar vídeo de conteúdo** (Reels/Shorts/TikTok) **sem o DaVinci Resolve** —
+é tudo **ffmpeg puro**. Automatiza a parte chata: **legenda** queimada em 6 estilos
+(karaokê, palavra gigante, pop, bloco, keyword, minimalista), **cor** em 6 looks
+(teal&orange, quente, frio, vibrante, film fade, p&b), **áudio** (conserta o som que
+sai "só de um lado", tira ruído, nivela volume), **corte de silêncio** e **reframe
+9:16**. Inclui 4 skills + um **agente** que edita de ponta a ponta na ordem certa.
+Roda junto do `davinci-resolve-mcp` (usa o mesmo venv e transcrição).
+
+- [`COMO_USAR.md`](kit-edicao-video/COMO_USAR.md) — leia primeiro.
+- Scripts em [`davinci-resolve-mcp/scripts_resolve/`](davinci-resolve-mcp/scripts_resolve/) (`30`–`70`).
