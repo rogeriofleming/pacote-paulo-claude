@@ -61,12 +61,22 @@ estilo depois de editar: `--regerar`.
 (pretos lavados) · `pb`. Intensidade: `--forca 0.0..1.5`. Cor é gosto — se ficar
 forte/fraco, ajuste o `--forca` ou o dict `LOOKS` no topo do script.
 
-## As skills e o agente
+## As skills, o estrategista e o agente
 
 Nesta pasta tem, no formato do Claude Code:
-- `skills/` — 4 skills (`legenda-video`, `colorir-video`, `tratar-audio`,
-  `cortar-silencio`) que você pode instalar no seu Claude Code pra acionar cada
-  ferramenta por linguagem natural.
+- `skills/` — 5 skills que você pode instalar no seu Claude Code pra acionar por
+  linguagem natural:
+  - **4 mecânicas** (`legenda-video`, `colorir-video`, `tratar-audio`,
+    `cortar-silencio`) — cada uma executa uma ferramenta.
+  - **`reels-estrategista`** — a **cabeça** que decide COMO editar pra prender: ela
+    analisa o vídeo, diagnostica retenção (hook, ritmo, onde cortar), monta um
+    **Plano de Retenção** pra você aprovar e só então orquestra as mecânicas na
+    ordem certa. Use quando a decisão de o que fazer ainda não foi tomada ("edita
+    esse reels pra prender", "me diz onde cortar"). As mecânicas continuam pra
+    quando você já sabe o que quer (só legenda, só cor).
+- `referencias/GUIA_RETENCAO.md` — os **princípios de retenção** (hook, variação,
+  ritmo, cortes) com o peso de evidência de cada um (ciência dura × prática de
+  mercado × ofício de editor). É o que o estrategista consulta pra decidir.
 - `agente/editor-video.md` — um **agente** que edita um vídeo de ponta a ponta,
   orquestrando as ferramentas na ordem certa. Aciona com "edita esse vídeo".
 
