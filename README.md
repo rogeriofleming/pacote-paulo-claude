@@ -124,8 +124,10 @@ Kit pra **editar vídeo de conteúdo** (Reels/Shorts/TikTok) **sem o DaVinci Res
 é tudo **ffmpeg puro**. Automatiza a parte chata: **legenda** queimada em 6 estilos
 (karaokê, palavra gigante, pop, bloco, keyword, minimalista), **cor** em 6 looks
 (teal&orange, quente, frio, vibrante, film fade, p&b), **áudio** (conserta o som que
-sai "só de um lado", tira ruído, nivela volume), **corte de silêncio** e **reframe
-9:16**. Inclui 4 skills mecânicas + um **estrategista de retenção** (`reels-estrategista`:
+sai "só de um lado", tira ruído, nivela volume), **corte de silêncio**, **reframe
+9:16** e **comprimir/converter** (deixa o vídeo leve sem perda visível, converte pra
+MP4 universal e roda em lote — um "Format Factory" em ffmpeg). Inclui 5 skills
+mecânicas + um **estrategista de retenção** (`reels-estrategista`:
 analisa o vídeo, decide COMO editar pra prender com base em ciência de atenção, e só
 então orquestra as mecânicas — a cabeça, não só a mão) + um **agente** que edita de
 ponta a ponta na ordem certa. Roda junto do `davinci-resolve-mcp` (mesmo venv e transcrição).

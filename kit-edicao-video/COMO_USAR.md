@@ -37,6 +37,7 @@ cd davinci-resolve-mcp
 | Cortar silêncio | `50_cortar_silencio_externo.py` | remove pausas, cospe o MP4 cortado | `- SEM SILENCIO.mp4` |
 | Reframe 9:16 | `40_reframe_vertical.py --modo <>` | horizontal → vertical (blur/crop/pad) | `- 9x16.mp4` |
 | Legenda | `30_legenda_reels.py --estilo <>` | 6 estilos de legenda queimada | `- LEGENDADO.mp4` |
+| Comprimir/converter | `80_comprimir.py --qualidade <>` | deixa leve sem perda visível, converte pra MP4, lote | `- LEVE.mp4` |
 
 > Nenhum script toca o arquivo original — sempre gera um novo ao lado.
 > Cada um tem `--autoteste` (roda num vídeo sintético pra provar que funciona) e um
@@ -71,10 +72,10 @@ forte/fraco, ajuste o `--forca` ou o dict `LOOKS` no topo do script.
 ## As skills, o estrategista e o agente
 
 Nesta pasta tem, no formato do Claude Code:
-- `skills/` — 5 skills que você pode instalar no seu Claude Code pra acionar por
+- `skills/` — 6 skills que você pode instalar no seu Claude Code pra acionar por
   linguagem natural:
-  - **4 mecânicas** (`legenda-video`, `colorir-video`, `tratar-audio`,
-    `cortar-silencio`) — cada uma executa uma ferramenta.
+  - **5 mecânicas** (`legenda-video`, `colorir-video`, `tratar-audio`,
+    `cortar-silencio`, `comprimir-video`) — cada uma executa uma ferramenta.
   - **`reels-estrategista`** — a **cabeça** que decide COMO editar pra prender: ela
     analisa o vídeo, diagnostica retenção (hook, ritmo, onde cortar), monta um
     **Plano de Retenção** pra você aprovar e só então orquestra as mecânicas na
