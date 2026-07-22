@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Página propositalmente quebrada no mobile</title>
+  <!-- FALTA a viewport meta de propósito — a skill adiciona -->
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; color: #1a1a1a; }
+    .wrap { padding: 48px; }
+    h1 { font-size: 40px; }
+
+    /* PROBLEMA 1: largura fixa maior que a tela */
+    .hero { width: 720px; background: #4f46e5; color: #fff; padding: 32px; border-radius: 12px; }
+
+    /* PROBLEMA 2: grid de 4 colunas fixas */
+    .cards { display: grid; grid-template-columns: repeat(4, 240px); gap: 16px; margin-top: 24px; }
+    .card { background: #f1f5f9; padding: 20px; border-radius: 10px; }
+
+    /* PROBLEMA 3: flex numa linha só, sem wrap */
+    .row { display: flex; gap: 16px; margin-top: 24px; }
+    .pill { background: #10b981; color: #fff; padding: 12px 20px; border-radius: 999px; white-space: nowrap; }
+
+    /* PROBLEMA 4: bloco de largura fixa gigante (simula imagem sem max-width) */
+    .banner { width: 900px; height: 120px; background: linear-gradient(90deg,#f59e0b,#ef4444); border-radius: 12px; margin-top: 24px; }
+
+    /* PROBLEMA 5: input pequeno (iOS dá zoom < 16px) e largo demais */
+    input { font-size: 12px; padding: 8px; width: 600px; margin-top: 24px; }
+
+    /* PROBLEMA 6: URL/palavra longa sem quebra */
+    .longtext { margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Relatório do mês</h1>
+    <div class="hero">Bloco hero com largura fixa de 720px que não cabe em tela de celular nenhuma.</div>
+
+    <div class="cards">
+      <div class="card">Card 1</div>
+      <div class="card">Card 2</div>
+      <div class="card">Card 3</div>
+      <div class="card">Card 4</div>
+    </div>
+
+    <div class="row">
+      <span class="pill">Categoria muito comprida um</span>
+      <span class="pill">Categoria muito comprida dois</span>
+      <span class="pill">Categoria muito comprida três</span>
+    </div>
+
+    <div class="banner"></div>
+
+    <input type="text" placeholder="Digite um valor bem grande aqui dentro">
+
+    <p class="longtext">Link: https://exemplo.com/um/caminho/absurdamente/comprido/que/nao/quebra/em/lugar/nenhum/e/estoura/a/tela/do/celular/facilmente</p>
+  </div>
+</body>
+</html>

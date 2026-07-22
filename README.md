@@ -1,6 +1,6 @@
 # Pacote pro Paulo — organização do Claude Code, skills e DaVinci MCP
 
-Este repositório reúne onze coisas, cada uma numa pasta:
+Este repositório reúne doze coisas, cada uma numa pasta:
 
 ## 1. `ecossistema-claude/`
 
@@ -107,3 +107,13 @@ open-source [`barckley75/resolve-claude-mcp`](https://github.com/barckley75/reso
 - [`INSTRUCOES_PAULO.md`](davinci-resolve-mcp/INSTRUCOES_PAULO.md) — leia primeiro, tem o passo a passo de instalação.
 - [`WINDOWS_SETUP.md`](davinci-resolve-mcp/WINDOWS_SETUP.md) — o que foi adaptado/resolvido pra rodar no Windows.
 - [`CORTES.md`](davinci-resolve-mcp/CORTES.md) — como usar os dois scripts de corte automático.
+
+## 12. `skill-responsivar-mobile/`
+
+Pega um **arquivo HTML** e o deixa **responsivo perfeito no celular** (telas 5", 5.5" e
+6"+), mexendo **só em CSS** dentro de `@media (max-width)` — sem tocar no layout desktop e
+sem reestruturar o HTML. Não faz "no olho": roda um **loop verificado num browser real**
+que mede o overflow horizontal em 5 larguras e **aponta o elemento que está vazando a
+tela**, até fechar em zero. Inclui o motor de medição e um exemplo quebrado pra testar.
+
+- [`COMO_USAR.md`](skill-responsivar-mobile/COMO_USAR.md) — leia primeiro, tem instalação e uso.
