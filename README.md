@@ -130,6 +130,7 @@ analisa o vídeo, decide COMO editar pra prender com base em ciência de atenç�
 então orquestra as mecânicas — a cabeça, não só a mão) + um **agente** que edita de
 ponta a ponta na ordem certa. Roda junto do `davinci-resolve-mcp` (mesmo venv e transcrição).
 
+- **Instalação num clique:** `davinci-resolve-mcp/INSTALAR.bat` (Windows) ou `instalar.sh` (mac/Linux) baixa e configura tudo (uv, ffmpeg, faster-whisper, modelo Whisper) e testa. **Abrindo este repo no Claude Code, ele já te oferece rodar isso** — é só confirmar.
 - [`COMO_USAR.md`](kit-edicao-video/COMO_USAR.md) — leia primeiro.
 - [`referencias/GUIA_RETENCAO.md`](kit-edicao-video/referencias/GUIA_RETENCAO.md) — os princípios de retenção (ciência × prática × ofício) que o estrategista usa pra decidir.
 - [`conhecimento-edicao/`](kit-edicao-video/conhecimento-edicao/) — o corpo de conhecimento de pesquisa por trás do kit: automação do DaVinci por Python (free × Studio), boas práticas de edição + bancos de recursos 100% grátis (licença conferida), e o que editores profissionais reais dizem sobre o ofício.
